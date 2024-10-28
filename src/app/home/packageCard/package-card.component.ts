@@ -1,6 +1,6 @@
 import { Component ,Input, Output,EventEmitter} from '@angular/core';
-import {ConvertDownloadsPipe} from '../../../../pipes/convert-downloads.pipe';
-import {ConvertDependenciesPipe} from '../../../../pipes/convert-dependencies.pipe';
+import {ConvertDownloadsPipe} from '../../../pipes/convert-downloads.pipe';
+import {ConvertDependenciesPipe} from '../../../pipes/convert-dependencies.pipe';
 
 @Component({
   selector: 'package-card',

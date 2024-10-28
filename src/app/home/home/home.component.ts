@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
-import {PackageCardComponent} from '../packageCard/package-card/package-card.component';
+import {PackageCardComponent} from '../packageCard/package-card.component';
 import axios from 'axios';
 interface Package{
   id:string,
