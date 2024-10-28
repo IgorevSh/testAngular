@@ -1,0 +1,26 @@
+.package_card{
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.package_card:hover  .package_card_header{
+  background-color: #e0f2ff;
+}
+.dependency.package_card_header {
+  background-color: #ffdddd;
+}
+.package_card_header{
+  padding: 10px 15px;
+  border-radius: 10px 10px 0 0 ;
+  border-bottom: 2px solid black;
+}
+
+.package_card_content{
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 25%;
+}

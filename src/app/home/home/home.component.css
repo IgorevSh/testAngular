@@ -1,0 +1,11 @@
+.main_wrapper input{
+  margin: 15px 0;
+}
+
+.package_list{
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,13 @@
+<div class="package_card" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
+  <div  class="package_card_header" [class.dependency]="highlight">
+    @if(formatItem.length>1){
+    <span><span style="color: orange">{{formatItem[0]}}</span>/{{formatItem.slice(1).join('/')}}</span>
+    }@else{
+    <span>{{item.id}}</span>
+    }
+  </div>
+  <div  class="package_card_content">
+    <span>{{item.dependencyCount | convertDependencies}}</span>
+    <span>{{item.weeklyDownloads | convertDownloads}} 📥</span>
+  </div>
+</div>
