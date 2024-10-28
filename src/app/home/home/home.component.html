@@ -1,14 +1,18 @@
 <div>
   <div class="main_wrapper">
     <input placeholder="search"  [(ngModel)]="search"> <button [disabled]="!list.length" style="margin: 0px 10px" (click)="updateList()">⟳</button>
-    <div class="package_list">
-      @if(list.length>0){
-        @for (item of filteredBlocks;track item.id){
-          <package-card [item]='item' [highlight]="needToHighLight(item.id)" (findDependencies)="findDependencies($event)" (clearDependencies)="clearDependencies()" ></package-card>
+    @if(filteredBlocks.length||!list.length){
+      <div class="package_list">
+        @if(list.length){
+          @for (item of filteredBlocks;track item.id){
+            <package-card [item]='item' [highlight]="needToHighLight(item.id)" (findDependencies)="findDependencies($event)" (clearDependencies)="clearDependencies()" ></package-card>
+          }
+        }@else{
+            <span>Loading...</span>
         }
-      }@else{
-          <span>Loading...</span>
-      }
-    </div>
-</div>
+      </div>
+    }@else{
+      <div>No Result</div>
+    }
+  </div>
 </div>
